@@ -32,7 +32,7 @@ A `<canvas />` component that manages a render queue. Pass in an operations `que
 
 ##### [TileSet](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileSet/index.js)
 
-Tile references for graphical tile maps (e.g. TileImageMap).
+Tile references for graphical tile maps (e.g. [TileImageMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileImageMap/index.js)).
 
 ##### [TileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileMap/index.js)
 
@@ -40,7 +40,7 @@ A tile map (matrix) of numeric tiles.
 
 ##### [TileImage](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileImage/index.js)
 
-An image for graphical tile maps (e.g. TileImageMap).
+An image for graphical tile maps (e.g. [TileImageMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileImageMap/index.js)).
 
 ##### [TileImageMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileImageMap/index.js)
 

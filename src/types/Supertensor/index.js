@@ -1,10 +1,12 @@
+/**
+ * Supertensor
+ *
+ * An array of tensors.
+ */
+
 import Tensor from '../Tensor';
 
 const TYPE_ERROR = 'TypeError: Invalid tensor data.';
-
-/**
- * Supertensor
- */
 
 class Supertensor extends Array {
   constructor (tensorArray) {

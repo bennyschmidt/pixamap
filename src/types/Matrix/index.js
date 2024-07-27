@@ -1,8 +1,10 @@
-import Vector from '../Vector';
-
 /**
  * Matrix
+ *
+ * An array of vectors.
  */
+
+import Vector from '../Vector';
 
 class Matrix extends Array {
   constructor (vectorArray) {

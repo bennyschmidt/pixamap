@@ -1,4 +1,10 @@
-const ImageTile = ({ src, size }) => new Promise((resolve, reject) => {
+/**
+ * TileImage
+ *
+ * An image for graphical tile maps (e.g. TileImageMap).
+ */
+
+const TileImage = ({ src, size }) => new Promise((resolve, reject) => {
   const image = new Image();
 
   image.onload = () => resolve(image);
@@ -10,4 +16,4 @@ const ImageTile = ({ src, size }) => new Promise((resolve, reject) => {
   image.src = src;
 });
 
-export default ImageTile;
+export default TileImage;

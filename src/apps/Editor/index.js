@@ -1,3 +1,10 @@
+/**
+ * Editor
+ *
+ * A visual editor with tile import and map
+ * export options.
+ */
+
 import { useEffect, useState } from 'react';
 
 import {
@@ -68,6 +75,8 @@ const TileMapEditor = () => {
       document.body.onmousemove = null;
       document.body.onscroll = null;
     }
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Zoom
@@ -79,6 +88,8 @@ const TileMapEditor = () => {
 
     setCanvasSize(updatedCanvasSize);
     setTileSize(updatedCanvasSize / numTiles);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [zoomLevel]);
 
   // Tiles

@@ -1,5 +1,7 @@
 /**
  * TileMap
+ *
+ * A tile map (matrix) of numeric tiles.
  */
 
 import { Tensor } from '../../types';

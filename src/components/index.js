@@ -1,11 +1,11 @@
 import AnimatedCanvas from './AnimatedCanvas';
-import ImageTile from './ImageTile';
+import TileImage from './TileImage';
 import TileMap from './TileMap';
 import TileImageMap from './TileImageMap';
 
 export {
   AnimatedCanvas,
-  ImageTile,
+  TileImage,
   TileMap,
   TileImageMap
 };

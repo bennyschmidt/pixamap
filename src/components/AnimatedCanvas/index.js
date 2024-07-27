@@ -1,3 +1,11 @@
+/**
+ * AnimatedCanvas
+ *
+ * A <canvas /> component that manages a render queue.
+ * Pass in an operations `queue` and `fps` to animate
+ * the canvas.
+ */
+
 import React, { useState, useEffect, useRef } from 'react';
 
 const CANVAS_STYLE_PROP_REGEXP = (
@@ -31,6 +39,8 @@ const AnimatedCanvas = ({
     }
 
     setLastRender(Date.now());
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [queue]);
 
   return <canvas ref={canvasRef} width={width} height={height} />;

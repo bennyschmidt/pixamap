@@ -1,10 +1,12 @@
+/**
+ * TileImageMap
+ *
+ * A tile map (matrix) of image-based tiles.
+ */
+
 import TileMap from '../TileMap';
 
 const TILE_NOT_FOUND_ERROR = 'Tile not found.';
-
-/**
- * TileImageMap
- */
 
 class TileImageMap extends TileMap {
   constructor ({

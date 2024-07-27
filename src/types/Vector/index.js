@@ -1,5 +1,7 @@
 /**
  * Vector
+ *
+ * An array of numbers with at least 2 elements.
  */
 
 const MIN_LENGTH = 2;

@@ -1,25 +1,25 @@
-import MapInstance from '../MapInstance';
+import TileMap from '../TileMap';
 
 const TILE_NOT_FOUND_ERROR = 'Tile not found.';
 
 /**
- * TileMapInstance
+ * TileImageMap
  */
 
-class TileMapInstance extends MapInstance {
+class TileImageMap extends TileMap {
   constructor ({
     layers = [],
     tiles = [],
     name = ''
   }) {
-    super(layers);
+    super({ name, layers });
 
     this.tiles = tiles;
     this.tileAtXY = this.tileAtXY.bind(this);
   }
 
-  tileAtXY (x, y, layer = 0) {
-    const tileId = this.cellAtXY(x, y, layer);
+  tileImageAtXY (x, y, layer = 0) {
+    const tileId = this.tileAtXY(x, y, layer);
 
     if (tileId === undefined) {
       throw TILE_NOT_FOUND_ERROR;
@@ -35,4 +35,4 @@ class TileMapInstance extends MapInstance {
   }
 }
 
-export default TileMapInstance;
+export default TileImageMap;

@@ -1,14 +1,4 @@
-const ImageTile = ({ src, size }) => new Promise((resolve, reject) => {
-  const image = new Image();
-
-  image.onload = () => resolve(image);
-  image.onerror = reject;
-
-  image.alt = 'tile';
-  image.width = `${size}px`;
-  image.height = `${size}px`;
-  image.src = src;
-});
+import { ImageTile } from '..';
 
 const DefaultTileSet = [
   'transparent',
@@ -28,21 +18,6 @@ const createTileSet = async tileSetName => {
   switch (tileSetName) {
     case 'default':
       return DefaultTileSet;
-
-    case 'picsum':
-      return [
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 }),
-        await ImageTile({ src: "https://picsum.photos/512", size: 512 })
-      ];
 
     case 'rpg':
       return [

@@ -1,11 +1,11 @@
 import Vector from './Vector';
 import Matrix from './Matrix';
-import Layer from './Layer';
-import MapData from './MapData';
+import Tensor from './Tensor';
+import Supertensor from './Supertensor';
 
 export {
-  Layer,
-  Matrix,
   Vector,
-  MapData
+  Matrix,
+  Tensor,
+  Supertensor
 };

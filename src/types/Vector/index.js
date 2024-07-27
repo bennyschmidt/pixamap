@@ -2,10 +2,10 @@
  * Vector
  */
 
+const MIN_LENGTH = 2;
+const ELEMENT_TYPE = 'number';
 const RANGE_ERROR = 'RangeError: Invalid vector length.';
 const TYPE_ERROR = 'TypeError: Invalid vector element type.';
-const ELEMENT_TYPE = 'number';
-const MIN_LENGTH = 2;
 
 class Vector extends Array {
   constructor (vector) {

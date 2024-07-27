@@ -1,11 +1,11 @@
-import Canvas from './Canvas';
-import MapInstance from './MapInstance';
-import TileMapInstance from './TileMapInstance';
-import MapEditor from './MapEditor';
+import AnimatedCanvas from './AnimatedCanvas';
+import ImageTile from './ImageTile';
+import TileMap from './TileMap';
+import TileImageMap from './TileImageMap';
 
 export {
-  Canvas,
-  MapInstance,
-  TileMapInstance,
-  MapEditor
+  AnimatedCanvas,
+  ImageTile,
+  TileMap,
+  TileImageMap
 };

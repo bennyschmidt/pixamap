@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { MapEditor } from './components';
+import { Editor } from './pages';
 
 import './index.css';
 
@@ -8,6 +8,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <MapEditor />
+    <Editor />
   </React.StrictMode>
 );

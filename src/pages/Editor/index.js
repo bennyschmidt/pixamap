@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
 import {
-  Canvas,
-  TileMapInstance
-} from '..';
+  AnimatedCanvas,
+  TileImageMap
+} from '../../components';
 
 import {
   createTileSet,
   DefaultTileSet
-} from '../TileSet';
+} from '../../components/TileSet';
 
 import DefaultMap from '../../data/default';
 
@@ -27,15 +27,15 @@ const PALETTE = {
   dungeon: 'Dungeon'
 };
 
-const MapEditor = () => {
+const TileMapEditor = () => {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [numTiles, setNumTiles] = useState(NUM_TILES);
   const [canvasSize, setCanvasSize] = useState(CANVAS_SIZE * zoomLevel);
   const [tileSize, setTileSize] = useState(CANVAS_SIZE / (NUM_TILES / zoomLevel));
   const [tileSet, setTileSet] = useState(DefaultTileSet);
   const [tileMap, setTileMap] = useState();
-  const [operations, setOperations] = useState([]);
-  const [paletteOperations, setPaletteOperations] = useState([]);
+  const [tileQueue, setTileQueue] = useState([]);
+  const [paletteQueue, setPaletteQueue] = useState([]);
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
   const [palette, setPalette] = useState('dungeon');
@@ -133,7 +133,7 @@ const MapEditor = () => {
       });
     });
 
-    setOperations(queue);
+    setTileQueue(queue);
   }, [
     tileMap,
     tileSet,
@@ -151,7 +151,7 @@ const MapEditor = () => {
 
     setTileSet(loadedTileSet);
 
-    const updatedTileMap = new TileMapInstance({
+    const updatedTileMap = new TileImageMap({
       layers,
       tiles: loadedTileSet
     });
@@ -192,7 +192,25 @@ const MapEditor = () => {
           ]),
         };
 
-        queue.push(tileProps);
+        // Define tile mouse cursor
+
+        const cursorProps = {
+          strokeStyle: 'white',
+          strokeRect: [
+            // if currentTile
+            // colIndex * tileSize,
+            // rowIndex * tileSize,
+            0,
+            0,
+            tileSize,
+            tileSize
+          ]
+        };
+
+        queue.push(
+          tileProps,
+          cursorProps
+        );
 
         // if (isMouseOver) {
         //   // Define tile mouse cursor
@@ -212,7 +230,7 @@ const MapEditor = () => {
       });
     });
 
-    setPaletteOperations(queue);
+    setPaletteQueue(queue);
   };
 
   const onChangeLayer = index => () => (
@@ -220,12 +238,14 @@ const MapEditor = () => {
   );
 
   const onChangeZoomLevel = delta => () => setZoomLevel(
-    Math.min(
-      MAX_ZOOM,
-      Math.max(
-        1,
-        zoomLevel + delta
-      )
+    parseFloat(
+      Math.min(
+        MAX_ZOOM,
+        Math.max(
+          .1,
+          zoomLevel + delta
+        )
+      ).toFixed(1)
     )
   );
 
@@ -245,7 +265,7 @@ const MapEditor = () => {
   ]);
 
   return (
-    <div className="MapEditor">
+    <div className="TileMapEditor">
       <aside className="sidebar">
         <section className="sidebar-section">
           <>
@@ -293,9 +313,13 @@ const MapEditor = () => {
                 name="zoom"
                 id="zoom"
               >
-                <button onClick={onChangeZoomLevel(-1)}>-</button>
+                <button onClick={onChangeZoomLevel(zoomLevel > 1 ? -1 : -.1)}>
+                  -
+                </button>
                 <div>{zoomLevel}</div>
-                <button onClick={onChangeZoomLevel(+1)}>+</button>
+                <button onClick={onChangeZoomLevel(zoomLevel >= 1 ? 1 : .1)}>
+                  +
+                </button>
               </div>
             </div>
           </>
@@ -320,11 +344,11 @@ const MapEditor = () => {
                 ))}
               </select>
             </div>
-            <Canvas
+            <AnimatedCanvas
               width={MINIMAP_CANVAS_SIZE}
               height={MINIMAP_CANVAS_SIZE}
-              operations={paletteOperations}
-              setOperations={setPaletteOperations}
+              queue={paletteQueue}
+              setTileQueue={setPaletteQueue}
             />
           </>
         </section>
@@ -337,20 +361,24 @@ const MapEditor = () => {
             id="layers"
           >
             {layers.map((_, index) => (
-              <li key={index} onClick={onChangeLayer(index)}>Layer {index}</li>
+              <li key={index} onClick={onChangeLayer(index)}>
+                Layer {index}
+              </li>
             ))}
           </ul>
-          <button onClick={onCreateLayer} disabled>Add Layer</button>
+          <button onClick={onCreateLayer} disabled>
+            Add Layer
+          </button>
         </section>
       </aside>
-      <Canvas
+      <AnimatedCanvas
         width={canvasSize}
         height={canvasSize}
-        operations={operations}
-        setOperations={setOperations}
+        queue={tileQueue}
+        setTileQueue={setTileQueue}
       />
     </div>
   );
 };
 
-export default MapEditor;
+export default TileMapEditor;

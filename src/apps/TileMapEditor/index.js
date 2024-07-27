@@ -1,5 +1,5 @@
 /**
- * Editor
+ * TileMapEditor
  *
  * A visual editor with tile import and map
  * export options.
@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 import {
   AnimatedCanvas,
-  TileImageMap
+  GraphicalTileMap
 } from '../../components';
 
 import {
@@ -162,7 +162,7 @@ const TileMapEditor = () => {
 
     setTileSet(loadedTileSet);
 
-    const updatedTileMap = new TileImageMap({
+    const updatedTileMap = new GraphicalTileMap({
       layers,
       tiles: loadedTileSet
     });

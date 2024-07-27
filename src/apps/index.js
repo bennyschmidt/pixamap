@@ -1,5 +1,5 @@
-import Editor from '../apps/Editor';
+import TileMapEditor from '../apps/TileMapEditor';
 
 export {
-  Editor
+  TileMapEditor
 };

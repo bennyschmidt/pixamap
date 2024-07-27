@@ -1,10 +1,10 @@
 /**
- * TileImage
+ * TileGraphic
  *
- * An image for graphical tile maps (e.g. TileImageMap).
+ * An image for graphical tile maps (e.g. GraphicalTileMap).
  */
 
-const TileImage = ({ src, size }) => new Promise((resolve, reject) => {
+const TileGraphic = ({ src, size }) => new Promise((resolve, reject) => {
   const image = new Image();
 
   image.onload = () => resolve(image);
@@ -16,4 +16,4 @@ const TileImage = ({ src, size }) => new Promise((resolve, reject) => {
   image.src = src;
 });
 
-export default TileImage;
+export default TileGraphic;

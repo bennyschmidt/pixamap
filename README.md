@@ -32,22 +32,46 @@ A `<canvas />` component that manages a render queue. Pass in an operations `que
 
 ##### [TileSet](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileSet/index.js)
 
-Tile references for graphical tile maps (e.g. [TileImageMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileImageMap/index.js)).
+Tile references for graphical tile maps (e.g. [`GraphicalTileMap`](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTileMap/index.js)).
 
 ##### [TileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileMap/index.js)
 
-A tile map (matrix) of numeric tiles.
+A matrix of numeric tiles.
 
-##### [TileImage](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileImage/index.js)
+##### [TileGraphic](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileGraphic/index.js)
 
-An image for graphical tile maps (e.g. [TileImageMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileImageMap/index.js)).
+An image for graphical tile maps (e.g. [`GraphicalTileMap`](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTileMap/index.js)).
 
-##### [TileImageMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileImageMap/index.js)
+##### [GraphicalTileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTileMap/index.js)
 
-A tile map (matrix) of image-based tiles.
+A matrix of graphical tiles.
+
+##### BlockMap
+
+A matrix of numeric blocks.
+
+##### BlockGraphic
+
+A set of images for graphical block maps (e.g. `GraphicalBlockMap`).
+
+##### GraphicalBlockMap
+
+A matrix of graphical blocks.
 
 ## Apps
 
-#### [Editor](https://github.com/bennyschmidt/v-staq/blob/main/src/apps/Editor/index.js)
+##### PixelEditor (2D)
+
+A visual editor for drawing and painting with pixels.
+
+##### [TileMapEditor](https://github.com/bennyschmidt/v-staq/blob/main/src/apps/TileMapEditor/index.js) (2D)
 
 A visual editor with tile import and map export options.
+
+##### BlockMapEditor (3D)
+
+A visual editor with block import and map export options.
+
+##### EmbeddingsEditor (3D)
+
+A visual editor with vector import and embeddings export options.

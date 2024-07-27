@@ -1,11 +1,11 @@
 import AnimatedCanvas from './AnimatedCanvas';
-import TileImage from './TileImage';
+import TileGraphic from './TileGraphic';
 import TileMap from './TileMap';
-import TileImageMap from './TileImageMap';
+import GraphicalTileMap from './GraphicalTileMap';
 
 export {
   AnimatedCanvas,
-  TileImage,
+  TileGraphic,
   TileMap,
-  TileImageMap
+  GraphicalTileMap
 };

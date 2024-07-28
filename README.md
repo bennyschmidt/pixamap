@@ -107,6 +107,7 @@ n x n
 ##### Flat Vector (.fvecs)
 
 n
+
 n x n
 
 ### Raw data

@@ -1,12 +1,12 @@
 /**
- * GraphicalTile
+ * ImageTile
  *
- * For graphical tile maps (e.g. GraphicalTileMap).
+ * For image tile maps (e.g. ImageTileMap).
  */
 
 import { Tile } from '..';
 
-class GraphicalTile extends Tile {
+class ImageTile extends Tile {
   constructor ({ src, size }) {
     super({ value: src });
 
@@ -37,4 +37,4 @@ class GraphicalTile extends Tile {
   }
 }
 
-export default GraphicalTile;
+export default ImageTile;

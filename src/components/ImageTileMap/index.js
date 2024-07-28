@@ -1,14 +1,14 @@
 /**
- * GraphicalTileMap
+ * ImageTileMap
  *
- * A multi-layered graphical tile map.
+ * A multi-layered image tile map.
  */
 
 import TileMap from '../TileMap';
 
 const TILE_NOT_FOUND_ERROR = 'Tile not found.';
 
-class GraphicalTileMap extends TileMap {
+class ImageTileMap extends TileMap {
   constructor ({
     layers = [],
     tiles = [],
@@ -37,4 +37,4 @@ class GraphicalTileMap extends TileMap {
   }
 }
 
-export default GraphicalTileMap;
+export default ImageTileMap;

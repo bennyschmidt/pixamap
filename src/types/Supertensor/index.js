@@ -1,7 +1,7 @@
 /**
  * Supertensor
  *
- * An array of tensors.
+ * An array of tensors of the same size.
  */
 
 import Tensor from '../Tensor';

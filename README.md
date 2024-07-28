@@ -14,15 +14,15 @@ An array of numbers with at least 2 elements.
 
 ##### [Matrix](https://github.com/bennyschmidt/v-staq/blob/main/src/types/Matrix/index.js)
 
-An array of vectors.
+An array of vectors of the same length.
 
 ##### [Tensor](https://github.com/bennyschmidt/v-staq/blob/main/src/types/Tensor/index.js)
 
-An array of matrices.
+An array of matrices of the same size.
 
 ##### [Supertensor](https://github.com/bennyschmidt/v-staq/blob/main/src/types/Supertensor/index.js)
 
-An array of tensors.
+An array of tensors of the same size.
 
 ### Components
 
@@ -34,13 +34,13 @@ For tile maps (e.g. [`TileMap`](https://github.com/bennyschmidt/v-staq/blob/main
 
 A multi-layered tile map.
 
-##### [GraphicalTile](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTile/index.js)
+##### [ImageTile](https://github.com/bennyschmidt/v-staq/blob/main/src/components/ImageTile/index.js)
 
-For graphical tile maps (e.g. [`GraphicalTileMap`](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTileMap/index.js)).
+For image tile maps (e.g. [`ImageTileMap`](https://github.com/bennyschmidt/v-staq/blob/main/src/components/ImageTileMap/index.js)).
 
-##### [GraphicalTileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTileMap/index.js)
+##### [ImageTileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/ImageTileMap/index.js)
 
-A multi-layered graphical tile map.
+A multi-layered image tile map.
 
 ##### Tile3D
 
@@ -50,13 +50,13 @@ For 3D tile maps (e.g. `TileMap3D`).
 
 A multi-layered 3D tile map.
 
-##### GraphicalTile3D
+##### ImageTile3D
 
-For graphical 3D tile maps (e.g. `GraphicalTileMap3D`).
+For image 3D tile maps (e.g. `ImageTileMap3D`).
 
-##### GraphicalTileMap3D
+##### ImageTileMap3D
 
-A multi-layered graphical 3D tile map.
+A multi-layered image 3D tile map.
 
 ##### Token
 

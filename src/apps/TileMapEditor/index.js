@@ -7,7 +7,7 @@
 
 import { useEffect, useState } from 'react';
 
-import { GraphicalTileMap } from '../../components';
+import { ImageTileMap } from '../../components';
 import { AnimatedCanvas } from '../../components/ui';
 
 import {
@@ -164,7 +164,7 @@ const TileMapEditor = () => {
 
     setTileSet(loadedTileSet);
 
-    const updatedTileMap = new GraphicalTileMap({
+    const updatedTileMap = new ImageTileMap({
       layers,
       tiles: loadedTileSet
     });

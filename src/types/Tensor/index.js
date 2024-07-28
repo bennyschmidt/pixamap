@@ -1,7 +1,7 @@
 /**
  * Tensor
  *
- * An array of matrices.
+ * An array of matrices of the same size.
  */
 
 import Matrix from '../Matrix';

@@ -4,7 +4,7 @@
  * Utilities and default tile sets.
  */
 
-import { GraphicalTile, Tile } from '../../components';
+import { ImageTile, Tile } from '../../components';
 
 const TileSets = {
   default: [
@@ -84,7 +84,7 @@ const createTileSet = async (tileSetName = 'default') => await (
       ? await new Tile({
         value: tile
       }).value
-      : await new GraphicalTile({
+      : await new ImageTile({
         src: tile.src,
         size: tile.size
       }).value
@@ -95,5 +95,5 @@ export {
   createTileSet,
   TileSets,
   Tile,
-  GraphicalTile
+  ImageTile
 };

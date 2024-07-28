@@ -1,7 +1,7 @@
 /**
  * Matrix
  *
- * An array of vectors.
+ * An array of vectors of the same length.
  */
 
 import Vector from '../Vector';

@@ -1,20 +1,20 @@
 /**
- * Token
+ * TokenTile
  *
- * For token maps (e.g. TokenMap).
+ * For token maps (e.g. TokenTileMap).
  */
 
-class Token {
+class TokenTile {
   constructor ({ sequence, index }) {
     this.id = window.crypto.randomUUID();
     this.value = sequence[index];
 
     this.sequence = sequence.map((_, tokenIndex) => (
-      new Token({ sequence, index: tokenIndex }))
+      new TokenTile({ sequence, index: tokenIndex }))
     );
   }
 
   partOfSpeech () {}
 }
 
-export default Token;
+export default TokenTile;

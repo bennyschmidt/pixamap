@@ -7,9 +7,9 @@
 import TileMap from '../TileMap';
 
 const TILE_NOT_FOUND_ERROR = 'Tile not found.';
-const TOKEN_NOT_FOUND_ERROR = 'Token not found.';
+const TOKEN_NOT_FOUND_ERROR = 'Token tile not found.';
 
-class TokenMap extends TileMap {
+class TokenTileMap extends TileMap {
   constructor ({
     layers = [],
     tokens = [],
@@ -54,4 +54,4 @@ class TokenMap extends TileMap {
   }
 }
 
-export default TokenMap;
+export default TokenTileMap;

@@ -58,19 +58,19 @@ For image 3D tile maps (e.g. `ImageTileMap3D`).
 
 A multi-layered image 3D tile map.
 
-##### [Token](https://github.com/bennyschmidt/v-staq/blob/main/src/components/Token/index.js)
+##### [TokenTile](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TokenTile/index.js)
 
-For token maps (e.g. `TokenMap`).
+For token maps (e.g. [`TokenTileMap`](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TokenTileMap/index.js)).
 
-##### [TokenMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TokenMap/index.js)
+##### [TokenTileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TokenTileMap/index.js)
 
 A multi-layered token map.
 
-##### Token3D
+##### TokenTile3D
 
-For 3D token maps (e.g. `TokenMap3D`).
+For 3D token maps (e.g. `TokenTileMap3D`).
 
-##### TokenMap3D
+##### TokenTileMap3D
 
 A multi-layered 3D token map.
 

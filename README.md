@@ -42,37 +42,37 @@ For graphical tile maps (e.g. [`GraphicalTileMap`](https://github.com/bennyschmi
 
 A multi-layered graphical tile map.
 
-##### Block
+##### Tile3D
 
-For block maps (e.g. `BlockMap`).
+For 3D tile maps (e.g. `TileMap3D`).
 
-##### BlockMap
+##### TileMap3D
 
-A multi-layered block map.
+A multi-layered 3D tile map.
 
-##### GraphicalBlock
+##### GraphicalTile3D
 
-For graphical block maps (e.g. `GraphicalBlockMap`).
+For graphical 3D tile maps (e.g. `GraphicalTileMap3D`).
 
-##### GraphicalBlockMap
+##### GraphicalTileMap3D
 
-A multi-layered graphical block map.
+A multi-layered graphical 3D tile map.
 
-##### Text
+##### Token
 
-For text maps (e.g. `TextMap`).
+For token maps (e.g. `TokenMap`).
 
-##### TextMap
+##### TokenMap
 
-A multi-layered text map.
+A multi-layered token map.
 
-##### Text3D
+##### Token3D
 
-For 3D text maps (e.g. `TextMap3D`).
+For 3D token maps (e.g. `TokenMap3D`).
 
-##### TextMap3D
+##### TokenMap3D
 
-A multi-layered 3D text map.
+A multi-layered 3D token map.
 
 ## Apps
 

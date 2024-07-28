@@ -15,8 +15,6 @@ import {
   TileSets
 } from '../../data/tilesets';
 
-import DefaultLayer from '../../data/layers/default';
-
 import './styles.css';
 
 const CANVAS_SIZE = 3200;
@@ -31,6 +29,12 @@ const PALETTE = {
   rpg: 'RPG',
   dungeon: 'Dungeon'
 };
+
+const DEFAULT_LAYER = [
+  [1, 0, 1],
+  [0, 1, 0],
+  [1, 0, 1]
+];
 
 const TileMapEditor = () => {
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -48,7 +52,7 @@ const TileMapEditor = () => {
   const [mapName, setMapName] = useState('Untitled');
 
   const [layers, setLayers] = useState([
-    DefaultLayer
+    DEFAULT_LAYER
   ]);
 
   // Load

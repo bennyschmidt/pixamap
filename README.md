@@ -91,3 +91,37 @@ A visual editor with note import and board export options.
 ##### Token2Vec (3D)
 
 A visual editor with token import and embeddings export options.
+
+## Export Formats
+
+### External applications
+
+##### Unity (.json)
+
+n x n
+
+##### Minecraft (.mca)
+
+16 x 16 x 256
+
+##### Fortran (.fvec)
+
+n x n
+
+### Raw data
+
+##### Vector (.json)
+
+n
+
+##### Matrix (.json)
+
+n x n
+
+##### Tensor (.json)
+
+n x n x n
+
+##### Supertensor (.json)
+
+n x n x n x n

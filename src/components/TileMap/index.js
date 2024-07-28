@@ -43,6 +43,8 @@ class TileMap {
 
     return value;
   }
+
+  tileNearXY (x, y, layer = 0) {}
 }
 
 export default TileMap;

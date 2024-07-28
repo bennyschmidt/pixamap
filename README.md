@@ -58,11 +58,11 @@ For image 3D tile maps (e.g. `ImageTileMap3D`).
 
 A multi-layered image 3D tile map.
 
-##### Token
+##### [Token](https://github.com/bennyschmidt/v-staq/blob/main/src/components/Token/index.js)
 
 For token maps (e.g. `TokenMap`).
 
-##### TokenMap
+##### [TokenMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TokenMap/index.js)
 
 A multi-layered token map.
 

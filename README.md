@@ -76,7 +76,7 @@ A multi-layered 3D token map.
 
 ## Apps
 
-##### [TileMapEditor](https://github.com/bennyschmidt/v-staq/blob/main/src/apps/TileMapEditor/index.js) (2D)
+##### [MapEditor](https://github.com/bennyschmidt/v-staq/blob/main/src/apps/MapEditor/index.js) (2D)
 
 A visual editor with tile import and map export options.
 

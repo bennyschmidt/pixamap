@@ -1,9 +1,9 @@
-.TileMapEditor {
+.MapEditor {
   width: 100vw;
   height: 100vh;
 }
 
-.TileMapEditor canvas {
+.MapEditor canvas {
   background: black;
 }
 

@@ -1,5 +1,5 @@
 /**
- * TileMapEditor
+ * MapEditor
  *
  * A visual editor with tile import and map
  * export options.
@@ -36,7 +36,7 @@ const DEFAULT_LAYER = [
   [1, 0, 1]
 ];
 
-const TileMapEditor = () => {
+const MapEditor = () => {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [numTiles, setNumTiles] = useState(NUM_TILES);
   const [canvasSize, setCanvasSize] = useState(CANVAS_SIZE * zoomLevel);
@@ -278,7 +278,7 @@ const TileMapEditor = () => {
   ]);
 
   return (
-    <div className="TileMapEditor">
+    <div className="MapEditor">
       <aside className="sidebar">
         <section className="sidebar-section">
           <>
@@ -394,4 +394,4 @@ const TileMapEditor = () => {
   );
 };
 
-export default TileMapEditor;
+export default MapEditor;

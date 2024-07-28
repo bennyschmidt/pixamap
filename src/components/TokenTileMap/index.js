@@ -7,7 +7,7 @@
 import TileMap from '../TileMap';
 
 const TILE_NOT_FOUND_ERROR = 'Tile not found.';
-const TOKEN_NOT_FOUND_ERROR = 'Token tile not found.';
+const TOKEN_NOT_FOUND_ERROR = 'Token not found.';
 
 class TokenTileMap extends TileMap {
   constructor ({
@@ -28,13 +28,13 @@ class TokenTileMap extends TileMap {
       throw TILE_NOT_FOUND_ERROR;
     }
 
-    const tile = this.tokens[tileId];
+    const token = this.tokens[tileId];
 
-    if (!tile) {
+    if (!token) {
       throw TILE_NOT_FOUND_ERROR;
     }
 
-    return tile;
+    return token;
   }
 
   tokenNearXY (x, y, layer = 0) {

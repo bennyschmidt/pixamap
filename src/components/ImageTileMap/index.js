@@ -7,17 +7,17 @@
 import TileMap from '../TileMap';
 
 const TILE_NOT_FOUND_ERROR = 'Tile not found.';
-const TILE_IMAGE_NOT_FOUND_ERROR = 'Tile image not found.';
+const IMAGE_NOT_FOUND_ERROR = 'Image not found.';
 
 class ImageTileMap extends TileMap {
   constructor ({
     layers = [],
-    tiles = [],
+    images = [],
     name = ''
   }) {
     super({ name, layers });
 
-    this.tiles = tiles;
+    this.images = images;
     this.tileAtXY = this.tileAtXY.bind(this);
   }
 
@@ -28,13 +28,13 @@ class ImageTileMap extends TileMap {
       throw TILE_NOT_FOUND_ERROR;
     }
 
-    const tileImage = this.tiles[tileId];
+    const image = this.images[tileId];
 
-    if (!tileImage) {
-      throw TILE_IMAGE_NOT_FOUND_ERROR;
+    if (!image) {
+      throw IMAGE_NOT_FOUND_ERROR;
     }
 
-    return tileImage;
+    return image;
   }
 
   tileImageNearXY (x, y, layer = 0) {
@@ -44,13 +44,13 @@ class ImageTileMap extends TileMap {
       throw TILE_NOT_FOUND_ERROR;
     }
 
-    const tileImage = this.tiles[tileId];
+    const image = this.images[tileId];
 
-    if (!tileImage) {
-      throw TILE_IMAGE_NOT_FOUND_ERROR;
+    if (!image) {
+      throw IMAGE_NOT_FOUND_ERROR;
     }
 
-    return tileImage;
+    return image;
   }
 }
 

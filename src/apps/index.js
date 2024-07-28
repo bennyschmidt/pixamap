@@ -1,10 +1,10 @@
 import BlockCraft from './BlockCraft';
 import NoteBoard from '../apps/NoteBoard';
-import TileMapEditor from '../apps/TileMapEditor';
+import MapEditor from '../apps/MapEditor';
 import Token2Vec from '../apps/Token2Vec';
 
 export {
-  TileMapEditor,
+  MapEditor,
   BlockCraft,
   NoteBoard,
   Token2Vec

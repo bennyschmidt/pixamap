@@ -30,6 +30,8 @@ const PALETTE = {
   dungeon: 'Dungeon'
 };
 
+const DEFAULT_PALETTE = 'default';
+
 const DEFAULT_LAYER = [
   [1, 0, 1],
   [0, 1, 0],
@@ -47,7 +49,7 @@ const MapEditor = () => {
   const [paletteQueue, setPaletteQueue] = useState([]);
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-  const [palette, setPalette] = useState(PALETTE.default);
+  const [palette, setPalette] = useState(DEFAULT_PALETTE);
   const [layer, setLayer] = useState(0);
   const [mapName, setMapName] = useState('Untitled');
   const [currentTileXY, setCurrentTileXY] = useState([0, 0]);
@@ -72,17 +74,13 @@ const MapEditor = () => {
     document.body.onmousemove = onMouseMove;
     document.body.onscroll = onScroll;
 
-    const onLoad = async () => {
-      setCurrentTileXY([0, 0]);
-      console.log('[v-staq]: Client loaded.');
-    };
-
-    onLoad();
+    onChangePalette({ target: { value: PALETTE.default }});
+    console.log('[v-staq]: Client loaded.');
 
     return () => {
       document.body.onmousemove = null;
       document.body.onscroll = null;
-    }
+    };
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -176,6 +174,7 @@ const MapEditor = () => {
     });
 
     setTileMap(updatedTileMap);
+    setCurrentTileXY([0, 0]);
 
     if (!updatedTileMap?.images) return;
 
@@ -213,13 +212,15 @@ const MapEditor = () => {
 
         // Define tile mouse cursor
 
+        const defaultTileSize = CANVAS_SIZE / NUM_TILES;
+
         const cursorProps = {
           strokeStyle: 'white',
           strokeRect: [
-            currentTileXY[0] * tileSize,
-            currentTileXY[1] * tileSize,
-            tileSize,
-            tileSize
+            currentTileXY[0] * defaultTileSize,
+            currentTileXY[1] * defaultTileSize,
+            defaultTileSize,
+            defaultTileSize
           ]
         };
 
@@ -234,10 +235,10 @@ const MapEditor = () => {
         //   const cursorProps = {
         //     strokeStyle: 'white',
         //     strokeRect: [
-        //       Math.round((mouseX - (tileSize / 2)) / tileSize) * tileSize,
-        //       Math.round((mouseY - (tileSize / 2)) / tileSize) * tileSize,
-        //       tileSize,
-        //       tileSize
+        //       Math.round((mouseX - (defaultTileSize / 2)) / defaultTileSize) * defaultTileSize,
+        //       Math.round((mouseY - (defaultTileSize / 2)) / defaultTileSize) * defaultTileSize,
+        //       defaultTileSize,
+        //       defaultTileSize
         //     ]
         //   };
 

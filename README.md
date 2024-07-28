@@ -28,7 +28,7 @@ An array of tensors.
 
 ##### [Tile](https://github.com/bennyschmidt/v-staq/blob/main/src/components/Tile/index.js)
 
-For tile maps (e.g. [TileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileMap/index.js)).
+For tile maps (e.g. [`TileMap`](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileMap/index.js)).
 
 ##### [TileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/TileMap/index.js)
 
@@ -36,7 +36,7 @@ A multi-layered tile map.
 
 ##### [GraphicalTile](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTile/index.js)
 
-For graphical tile maps (e.g. [GraphicalTileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTileMap/index.js)).
+For graphical tile maps (e.g. [`GraphicalTileMap`](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTileMap/index.js)).
 
 ##### [GraphicalTileMap](https://github.com/bennyschmidt/v-staq/blob/main/src/components/GraphicalTileMap/index.js)
 

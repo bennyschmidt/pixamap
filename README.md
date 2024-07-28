@@ -104,8 +104,9 @@ n x n
 
 16 x 16 x 256
 
-##### Fortran (.fvec)
+##### Flat Vector (.fvecs)
 
+n
 n x n
 
 ### Raw data

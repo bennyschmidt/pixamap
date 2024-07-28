@@ -14,14 +14,14 @@ import TokenMap3D from './TokenMap3D';
 export {
   Tile,
   TileMap,
-  Tile3D,
-  TileMap3D,
   GraphicalTile,
   GraphicalTileMap,
-  GraphicalTile3D,
-  GraphicalTileMap3D,
   Token,
   TokenMap,
+  Tile3D,
+  TileMap3D,
+  GraphicalTile3D,
+  GraphicalTileMap3D,
   Token3D,
   TokenMap3D
 };

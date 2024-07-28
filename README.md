@@ -76,18 +76,6 @@ A multi-layered 3D token map.
 
 ## Apps
 
-##### PixelEditor (2D)
-
-A visual editor for drawing and painting with pixels.
-
-##### VoxelEditor (3D)
-
-A visual editor for drawing and painting with voxels.
-
-##### NoteBoard (2D)
-
-A visual editor with note import and board export options.
-
 ##### [TileMapEditor](https://github.com/bennyschmidt/v-staq/blob/main/src/apps/TileMapEditor/index.js) (2D)
 
 A visual editor with tile import and map export options.
@@ -95,6 +83,10 @@ A visual editor with tile import and map export options.
 ##### BlockCraft (3D)
 
 A visual editor with block import and map export options.
+
+##### NoteBoard (2D)
+
+A visual editor with note import and board export options.
 
 ##### Token2Vec (3D)
 

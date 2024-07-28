@@ -1,7 +1,7 @@
 /**
  * GraphicalTileMap
  *
- * A tile map (matrix) of image-based tiles.
+ * A multi-layered graphical tile map.
  */
 
 import TileMap from '../TileMap';

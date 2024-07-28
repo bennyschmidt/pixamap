@@ -1,12 +1,12 @@
 /**
  * TileMap
  *
- * A tile map (matrix) of numeric tiles.
+ * A multi-layered tile map.
  */
 
 import { Tensor } from '../../types';
 
-const CELL_NOT_FOUND_ERROR = 'Cell not found.';
+const TILE_NOT_FOUND_ERROR = 'Tile not found.';
 
 class TileMap {
   constructor ({
@@ -19,7 +19,7 @@ class TileMap {
       this.fromLayers(layers);
     }
 
-    this.id = crypto.randomUUID();
+    this.id = window.crypto.randomUUID();
     this.name = name || 'Untitled Map';
     this.createdAt = new Date().toISOString();
     this.updatedAt = null;
@@ -38,7 +38,7 @@ class TileMap {
     const value = this.layers[layer][y][x];
 
     if (value === undefined) {
-      throw CELL_NOT_FOUND_ERROR;
+      throw TILE_NOT_FOUND_ERROR;
     }
 
     return value;

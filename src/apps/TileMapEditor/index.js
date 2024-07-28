@@ -7,17 +7,15 @@
 
 import { useEffect, useState } from 'react';
 
-import {
-  AnimatedCanvas,
-  GraphicalTileMap
-} from '../../components';
+import { GraphicalTileMap } from '../../components';
+import { AnimatedCanvas } from '../../components/ui';
 
 import {
   createTileSet,
-  DefaultTileSet
-} from '../../components/TileSet';
+  TileSets
+} from '../../data/tilesets';
 
-import DefaultMap from '../../data/default';
+import DefaultLayer from '../../data/layers/default';
 
 import './styles.css';
 
@@ -39,7 +37,7 @@ const TileMapEditor = () => {
   const [numTiles, setNumTiles] = useState(NUM_TILES);
   const [canvasSize, setCanvasSize] = useState(CANVAS_SIZE * zoomLevel);
   const [tileSize, setTileSize] = useState(CANVAS_SIZE / (NUM_TILES / zoomLevel));
-  const [tileSet, setTileSet] = useState(DefaultTileSet);
+  const [tileSet, setTileSet] = useState(TileSets.default);
   const [tileMap, setTileMap] = useState();
   const [tileQueue, setTileQueue] = useState([]);
   const [paletteQueue, setPaletteQueue] = useState([]);
@@ -50,7 +48,7 @@ const TileMapEditor = () => {
   const [mapName, setMapName] = useState('Untitled');
 
   const [layers, setLayers] = useState([
-    DefaultMap
+    DefaultLayer
   ]);
 
   // Load

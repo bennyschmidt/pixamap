@@ -47,9 +47,10 @@ const MapEditor = () => {
   const [paletteQueue, setPaletteQueue] = useState([]);
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
-  const [palette, setPalette] = useState('dungeon');
+  const [palette, setPalette] = useState(PALETTE.default);
   const [layer, setLayer] = useState(0);
   const [mapName, setMapName] = useState('Untitled');
+  const [currentTileXY, setCurrentTileXY] = useState([0, 0]);
 
   const [layers, setLayers] = useState([
     DEFAULT_LAYER
@@ -71,7 +72,12 @@ const MapEditor = () => {
     document.body.onmousemove = onMouseMove;
     document.body.onscroll = onScroll;
 
-    onChangePalette({ target: { value: palette }});
+    const onLoad = async () => {
+      setCurrentTileXY([0, 0]);
+      console.log('[v-staq]: Client loaded.');
+    };
+
+    onLoad();
 
     return () => {
       document.body.onmousemove = null;
@@ -166,15 +172,15 @@ const MapEditor = () => {
 
     const updatedTileMap = new ImageTileMap({
       layers,
-      tiles: loadedTileSet
+      images: loadedTileSet
     });
 
     setTileMap(updatedTileMap);
 
-    if (!updatedTileMap?.tiles) return;
+    if (!updatedTileMap?.images) return;
 
     const paletteMap = [];
-    const paletteTiles = [...updatedTileMap.tiles];
+    const paletteTiles = [...updatedTileMap.images];
 
     // Clear canvas
 
@@ -210,11 +216,8 @@ const MapEditor = () => {
         const cursorProps = {
           strokeStyle: 'white',
           strokeRect: [
-            // if currentTile
-            // colIndex * tileSize,
-            // rowIndex * tileSize,
-            0,
-            0,
+            currentTileXY[0] * tileSize,
+            currentTileXY[1] * tileSize,
             tileSize,
             tileSize
           ]
@@ -229,7 +232,7 @@ const MapEditor = () => {
         //   // Define tile mouse cursor
 
         //   const cursorProps = {
-        //     strokeStyle: 'gold',
+        //     strokeStyle: 'white',
         //     strokeRect: [
         //       Math.round((mouseX - (tileSize / 2)) / tileSize) * tileSize,
         //       Math.round((mouseY - (tileSize / 2)) / tileSize) * tileSize,
